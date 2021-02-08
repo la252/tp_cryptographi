@@ -2,8 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
-
 int main()
 {
    int i , j , k ,a ,x ,d,rang ,taille =0;
