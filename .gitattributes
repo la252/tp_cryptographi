@@ -1,2 +1,111 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+int main()
+{
+   int i , j , k ,a ,x ,d,rang ,taille =0;
+   int n = 26;
+   int occ[n];
+   char cesar[1000];
+   char texte[1000]={"jekj subq q b'qyh cyherebqdj cqyi yb o q gkqdt cucu gkubgkui fherbucui bq bedwkuk tk cqigku uij uwqbu q bq bedwkukh tk cuiiqwu q jhqdicujjhu s'uij qssufjqrbu fekh sgkubgkui cuiiqwui sekhji cqyi fqi fekh kdu bywdu tu jhqdicyiiyed q cuwqryj fqhiusedtu cqbwhu jekj leki feklup udhuwyijhuh cuwqesjuji tu ryji qbuqjeyhui ikhkd sthec cqyi yb o q tui fherbucui fhucyuhucudj leki qlup ruieyed t'unqsjucudjtukn sefyui tui ryji qbuqjeyjhui qbehi gku bui stheci iedj usedecygkucudj ydjuhuiiqsjiud whqstu gkqdjyju iukbucudj tuknyncudj leki tulup fekleyh tujhkyhu bui ryjiqbuqjeyhui tuzq kjybyiui kd sthec du fukjujhu uvvqsu qkjhucudj gk'ud bu tujhkyiqdjfxoiygkucudj buisqiiujjui dkcuhygkui iedj ryud cyukn qtqfjuui q su wu turuieydi"};
+   char alphabet[26]= {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
+   
+   
+   for (k=0; k<=26;k++)
+      {
+      	occ[k]=0;
+	  }
+   for(i=0 ; texte[i]!='\0';i++)
+    {
+    	for(j=0; j<=25 ;j++) 
+    	   {
+		      if (texte[i]==alphabet[j])
+		         {
+		         	taille++;
+    	         	break;
+				 }
+    	   
+		   }
+		j =0;
+		   
+	}
+	
+	
+	
+/*	printf("le longeur du texte est : %i ",taille);*/
+	
+	for(i=0;texte[i]!='\0'; i++)
+	 {
+	 	 for(j=0;j<=26;j++)
+	       {
+	       	    if (texte[i]==alphabet[j])
+	       	       {
+	       	       	occ[j]++;
+	       	       	break;
+				    }     
+		   }
+		j = 0;
+	 }
+	 
+	int max = 0;
+
+	for (a=0; a<=25;a++)
+	{
+		if(occ[a]> max )
+		  {
+		     max = occ[a];
+		     x = a ;
+	       }
+		  
+	}
+	d = x -4;
+	
+	/*printf(" le dcalage  %i ",d);*/
+   
+/*	for(k=0;k <= 25;k++)
+     {
+     	printf ("%c ",alphabet[k]);
+		printf ("%i\t",occ[k]);
+		printf("\n");
+     	
+	 }*/
+	  for(i=0;texte[i]!='\0'; i++)
+	 {
+	 	 for(j=0;j<=26;j++)
+	       {
+	       	    if (texte[i]==alphabet[j])
+	       	       {
+	       	       	rang = (j - d)%26 ;
+	       	       	if(rang <0 )
+	       	       	 {
+	       	       	 	rang+=26;
+					 }
+	       	       	cesar[i]= alphabet[rang];
+	       	       	break;
+				    } 
+				else
+				  {
+				  	if(texte[i]=='\t')
+				  	  {
+				  	  	cesar[i]='\t';
+				  	  	taille  = taille + 1;
+					}
+				  }
+		   }
+		j = 0;
+		
+	 }
+	 printf("le msg en claire est : \n ");
+	 
+	 for(i=0; i<taille ;i++)
+	 {
+	 	printf("%c",cesar[i]);
+	 }
+    return 0;
+    
+}
+
+
