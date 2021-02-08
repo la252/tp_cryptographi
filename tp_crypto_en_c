@@ -4,6 +4,7 @@
 
 int main()
 {
+
    int i , j , k ,a ,x ,d,rang ,taille =0;
    int n = 26;
    int occ[n];
@@ -11,7 +12,9 @@ int main()
    char texte[1000]={"jekj subq q b'qyh cyherebqdj cqyi yb o q gkqdt cucu gkubgkui fherbucui bq bedwkuk tk cqigku uij uwqbu q bq bedwkukh tk cuiiqwu q jhqdicujjhu s'uij qssufjqrbu fekh sgkubgkui cuiiqwui sekhji cqyi fqi fekh kdu bywdu tu jhqdicyiiyed q cuwqryj fqhiusedtu cqbwhu jekj leki feklup udhuwyijhuh cuwqesjuji tu ryji qbuqjeyhui ikhkd sthec cqyi yb o q tui fherbucui fhucyuhucudj leki qlup ruieyed t'unqsjucudjtukn sefyui tui ryji qbuqjeyjhui qbehi gku bui stheci iedj usedecygkucudj ydjuhuiiqsjiud whqstu gkqdjyju iukbucudj tuknyncudj leki tulup fekleyh tujhkyhu bui ryjiqbuqjeyhui tuzq kjybyiui kd sthec du fukjujhu uvvqsu qkjhucudj gk'ud bu tujhkyiqdjfxoiygkucudj buisqiiujjui dkcuhygkui iedj ryud cyukn qtqfjuui q su wu turuieydi"};
    char alphabet[26]= {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
    
-   
+    /*si non l utulisateur peut lire le texte par getch 
+    printf("Saisir votre message chiffré SVP : ");
+    getch(texte);*/
    for (k=0; k<=26;k++)
       {
       	occ[k]=0;
